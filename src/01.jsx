@@ -1079,4 +1079,4 @@ console.log(test2(demoInput));
 // 31
 console.log('Answer - Part 2 - Input 2');
 console.log(test2(testInput));
-// 
+// 26407426
