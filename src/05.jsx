@@ -1415,7 +1415,6 @@ const testInput = {
 	]
 };
 
-
 const isCorrect = (list, rules) => {
 	let correct = true;
 
