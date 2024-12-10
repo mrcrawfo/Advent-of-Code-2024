@@ -1007,16 +1007,16 @@ const testInput = [
 	[77564, 99991],
 	[94018, 96504],
 	[74639, 32409],
-	[56126, 28988]
+	[56126, 28988],
 ];
 
 const sortAscending = (a, b) => {
-	 if (a < b) {
-    return -1;
-  } else if (a > b) {
-    return 1;
-  }
-  return 0;
+	if (a < b) {
+		return -1;
+	} else if (a > b) {
+		return 1;
+	}
+	return 0;
 };
 
 const test1 = (input) => {
@@ -1050,11 +1050,14 @@ const test2 = (input) => {
 		arrayLeft.push(arrayInput[0]);
 		arrayRight.push(arrayInput[1]);
 	}
-	
+
 	const arrayFrequency = [];
 
 	for (let i = 0; i < input.length; i++) {
-		arrayFrequency.push([arrayLeft[i], arrayRight.filter((j) => j === arrayLeft[i]).length]);
+		arrayFrequency.push([
+			arrayLeft[i],
+			arrayRight.filter((j) => j === arrayLeft[i]).length,
+		]);
 	}
 
 	let total = 0;
@@ -1067,16 +1070,16 @@ const test2 = (input) => {
 	console.log(total);
 };
 
-console.log('Answer - Part 1 - Input 1');
+console.log("Answer - Part 1 - Input 1");
 console.log(test1(demoInput));
 // 11
-console.log('Answer - Part 1 - Input 2');
+console.log("Answer - Part 1 - Input 2");
 console.log(test1(testInput));
 // 3569916
 
-console.log('Answer - Part 2 - Input 1');
+console.log("Answer - Part 2 - Input 1");
 console.log(test2(demoInput));
 // 31
-console.log('Answer - Part 2 - Input 2');
+console.log("Answer - Part 2 - Input 2");
 console.log(test2(testInput));
 // 26407426

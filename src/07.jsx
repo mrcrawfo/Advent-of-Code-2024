@@ -1,39 +1,39 @@
 const demoInput = [
 	{
 		total: 190,
-		numbers: [10, 19]
+		numbers: [10, 19],
 	},
 	{
 		total: 3267,
-		numbers: [81, 40, 27]
+		numbers: [81, 40, 27],
 	},
 	{
 		total: 83,
-		numbers: [17, 5]
+		numbers: [17, 5],
 	},
 	{
 		total: 156,
-		numbers: [15, 6]
+		numbers: [15, 6],
 	},
 	{
 		total: 7290,
-		numbers: [6, 8, 6, 15]
+		numbers: [6, 8, 6, 15],
 	},
 	{
 		total: 161011,
-		numbers: [16, 10, 13]
+		numbers: [16, 10, 13],
 	},
 	{
 		total: 192,
-		numbers: [17, 8, 14]
+		numbers: [17, 8, 14],
 	},
 	{
 		total: 21037,
-		numbers: [9, 7, 18, 13]
+		numbers: [9, 7, 18, 13],
 	},
 	{
 		total: 292,
-		numbers: [11, 6, 16, 20]
+		numbers: [11, 6, 16, 20],
 	},
 ];
 
@@ -3448,7 +3448,7 @@ const test1 = (input) => {
 		let permutations = [numbers[0]];
 		for (let j = 1; j < numbers.length; j++) {
 			const number = numbers[j];
-			let newPermutations = [];
+			const newPermutations = [];
 			for (let k = 0; k < permutations.length; k++) {
 				newPermutations.push(permutations[k] * number);
 				newPermutations.push(permutations[k] + number);
@@ -3471,11 +3471,13 @@ const test2 = (input) => {
 		let permutations = [numbers[0]];
 		for (let j = 1; j < numbers.length; j++) {
 			const number = numbers[j];
-			let newPermutations = [];
+			const newPermutations = [];
 			for (let k = 0; k < permutations.length; k++) {
 				newPermutations.push(permutations[k] * number);
 				newPermutations.push(permutations[k] + number);
-				newPermutations.push(parseInt(permutations[k].toString() + number.toString()));
+				newPermutations.push(
+					Number.parseInt(permutations[k].toString() + number.toString()),
+				);
 			}
 			permutations = newPermutations;
 		}
@@ -3487,16 +3489,16 @@ const test2 = (input) => {
 	return sum;
 };
 
-console.log('Answer - Part 1 - Input 1');
+console.log("Answer - Part 1 - Input 1");
 console.log(test1(demoInput));
 // 3749
-console.log('Answer - Part 1 - Input 2');
+console.log("Answer - Part 1 - Input 2");
 console.log(test1(testInput));
 // 945512582195
 
-console.log('Answer - Part 2 - Input 1');
+console.log("Answer - Part 2 - Input 1");
 console.log(test2(demoInput));
 // 11387
-console.log('Answer - Part 2 - Input 2');
+console.log("Answer - Part 2 - Input 2");
 console.log(test2(testInput));
 // 271691107779347

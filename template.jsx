@@ -1,20 +1,12 @@
-const demoInput = [
+const demoInput = [];
 
-];
+const testInput = [];
 
-const testInput = [
+const test1 = (input) => {};
 
-];
+const test2 = (input) => {};
 
-const test1 = (input) => {
-
-};
-
-const test2 = (input) => {
-
-};
-
-console.log('Answer - Part 1 - Input 1');
+console.log("Answer - Part 1 - Input 1");
 console.log(test1(demoInput));
 // 
 //console.log('Answer - Part 1 - Input 2');
