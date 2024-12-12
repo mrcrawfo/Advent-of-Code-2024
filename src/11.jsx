@@ -33,7 +33,7 @@ const blink_precompute = (s, precompute, iterations) => {
 		const xs = x.toString();
 
 		if (!precompute[xs]) {
-			let a = [x]
+			let a = [x];
 			for (let y = 0; y < iterations; y++) {
 				a = blink(a);
 			}
@@ -65,23 +65,24 @@ const test2 = (input) => {
 	// 75 blinks
 	for (let i = 0; i < 75; i++) {
 		[stones, precompute] = blink_precompute(stones, precompute, 1);
-		console.log((1 + i * 1), stones.length, Object.entries(precompute).length);
+		console.log(1 + i * 1, stones.length, Object.entries(precompute).length);
 		console.log(stones);
 	}
 	console.log(precompute);
 
-	return stones.length;};
+	return stones.length;
+};
 
 console.log("Answer - Part 1 - Input 1");
 console.log(test1(demoInput));
 // 55312
-console.log('Answer - Part 1 - Input 2');
+console.log("Answer - Part 1 - Input 2");
 console.log(test1(testInput));
 // 198075
 
-console.log('Answer - Part 2 - Input 1');
+console.log("Answer - Part 2 - Input 1");
 console.log(test2(demoInput));
-// 
+//
 // console.log('Answer - Part 2 - Input 2');
 // console.log(test2(testInput));
-// 
+//

@@ -342,8 +342,6 @@ const test = (input, calculateCost) => {
 	return total;
 };
 
-const test2 = (input) => {};
-
 console.log("Answer - Part 1 - Input 1");
 console.log(test(demoInput, calculateCostByPerimeter));
 // 1930
